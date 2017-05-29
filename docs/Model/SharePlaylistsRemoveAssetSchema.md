@@ -1,0 +1,10 @@
+# SharePlaylistsRemoveAssetSchema
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id_asset** | **int** | Asset id to be removed | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
