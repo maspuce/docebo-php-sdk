@@ -19,12 +19,13 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 {
   "repositories": [
     {
+      "name": maspuce/docebo-php-sdk
       "type": "git",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/maspuce/docebo-php-sdk.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "maspuce/docebo-php-sdk": "*"
   }
 }
 ```
@@ -157,13 +158,15 @@ Class | Method | HTTP request | Description
 *CourseApi* | [**courseLearnv1coursescourseIddeeplink**](docs/Api/CourseApi.md#courselearnv1coursescourseiddeeplink) | **POST** /learn/v1/courses/{course_id}/deeplink | Deeplinking is enabled in the advanced settings of a course and it allows to share a course with anybody using a signed link
 *CourseApi* | [**courseLearnv1coursescourseIdlos**](docs/Api/CourseApi.md#courselearnv1coursescourseidlos) | **GET** /learn/v1/courses/{course_id}/los | Get all learning objects by id of course
 *CourseApi* | [**courseLearnv1coursescourseIdrating**](docs/Api/CourseApi.md#courselearnv1coursescourseidrating) | **GET** /learn/v1/courses/{course_id}/rating | View course rating
-*CourseApi* | [**courseLearnv1coursescourseIdsessionidSessiondateyyyyMmDd**](docs/Api/CourseApi.md#courselearnv1coursescourseidsessionidsessiondateyyyymmdd) | **GET** /learn/v1/courses/{course_id}/session/{id_session}/date/{yyyy-mm-dd} | Joining or starting a webinar session&#39;s date
+*CourseApi* | [**courseLearnv1coursescourseIdsessionidSessiondateyyyyMmDd**](docs/Api/CourseApi.md#courselearnv1coursescourseidsessionidsessiondateyyyymmdd) | **GET** /learn/v1/courses/{course_id}/session/{id_session}/date/{yyyy-mm-dd}
+ | Joining or starting a webinar session&#39;s date
 *CourseApi* | [**courseLearnv1coursesenrollmentPdf**](docs/Api/CourseApi.md#courselearnv1coursesenrollmentpdf) | **POST** /learn/v1/courses/enrollmentPdf | Returns all courses.
 *CourseApi* | [**courseLearnv1coursesid**](docs/Api/CourseApi.md#courselearnv1coursesid) | **PUT** /learn/v1/courses/{id} | Update specific Course
 *CourseApi* | [**courseLearnv1coursesid_0**](docs/Api/CourseApi.md#courselearnv1coursesid_0) | **DELETE** /learn/v1/courses/{id} | Delete specific Learning course by given ID
 *CourseApi* | [**courseLearnv1coursesidcomments**](docs/Api/CourseApi.md#courselearnv1coursesidcomments) | **GET** /learn/v1/courses/{id}/comments | Get discussions/posts of a course
 *CourseApi* | [**courseLearnv1coursesidrating**](docs/Api/CourseApi.md#courselearnv1coursesidrating) | **POST** /learn/v1/courses/{id}/rating | Update course rating
-*CourseApi* | [**courseLearnv1coursesidsessions**](docs/Api/CourseApi.md#courselearnv1coursesidsessions) | **GET** /learn/v1/courses/{id}/sessions | Get all session that the user is enrolled in or all available if not enrolled by id of course
+*CourseApi* | [**courseLearnv1coursesidsessions**](docs/Api/CourseApi.md#courselearnv1coursesidsessions) | **GET** /learn/v1/courses/{id}/sessions
+ | Get all session that the user is enrolled in or all available if not enrolled by id of course
 *CourseApi* | [**courseLearnv1coursesidwidgets**](docs/Api/CourseApi.md#courselearnv1coursesidwidgets) | **GET** /learn/v1/courses/{id}/widgets | Get all the widgets that have been set for the specific course
 *CourseApi* | [**courseLearnv1coursesreport**](docs/Api/CourseApi.md#courselearnv1coursesreport) | **GET** /learn/v1/courses/report | Get all learning objects by id of course
 *CourseApi* | [**courseLearnv1coursessessionidSessiondateyyyyMmDd**](docs/Api/CourseApi.md#courselearnv1coursessessionidsessiondateyyyymmdd) | **GET** /learn/v1/courses/session/{id_session}/date/{yyyy-mm-dd} | Get training materials of session
@@ -264,7 +267,8 @@ Class | Method | HTTP request | Description
 *LearningPlansApi* | [**learningPlansSkillv1plansplanIdskills_1**](docs/Api/LearningPlansApi.md#learningplansskillv1plansplanidskills_1) | **DELETE** /skill/v1/plans/{plan_id}/skills | De-assigns an existing skill(s) from given plan
 *LoApi* | [**loLearnv1loid**](docs/Api/LoApi.md#lolearnv1loid) | **GET** /learn/v1/lo/{id} | Returns information for a single learning object
 *LoApi* | [**loLearnv1loidLoplay**](docs/Api/LoApi.md#lolearnv1loidloplay) | **GET** /learn/v1/lo/{id_lo}/play | Play single LO or scorm|tincan chapter
-*LoApi* | [**loLearnv1loidtrack**](docs/Api/LoApi.md#lolearnv1loidtrack) | **POST** /learn/v1/lo/{id}/track | Track single LO
+*LoApi* | [**loLearnv1loidtrack**](docs/Api/LoApi.md#lolearnv1loidtrack) | **POST** /learn/v1/lo/{id}/track
+ | Track single LO
 *LpApi* | [**lpLearnv1lp**](docs/Api/LpApi.md#lplearnv1lp) | **GET** /learn/v1/lp | Returns list of Learning Plans
 *LpApi* | [**lpLearnv1lp_0**](docs/Api/LpApi.md#lplearnv1lp_0) | **PUT** /learn/v1/lp | Update specific Learning plan
 *LpApi* | [**lpLearnv1lp_1**](docs/Api/LpApi.md#lplearnv1lp_1) | **POST** /learn/v1/lp | Create a new Learning plan
@@ -275,15 +279,21 @@ Class | Method | HTTP request | Description
 *ManagerApi* | [**managerSkillv1managersmanagerIdusers**](docs/Api/ManagerApi.md#managerskillv1managersmanageridusers) | **GET** /skill/v1/managers/{manager_id}/users | Retrieves all the subordinates of a Manager
 *ManagerApi* | [**managerSkillv1managersmanagerIdusers_0**](docs/Api/ManagerApi.md#managerskillv1managersmanageridusers_0) | **POST** /skill/v1/managers/{manager_id}/users | Assigns subordinates to an User
 *ManagerApi* | [**managerSkillv1managersmanagerIdusers_1**](docs/Api/ManagerApi.md#managerskillv1managersmanageridusers_1) | **DELETE** /skill/v1/managers/{manager_id}/users | Unassigns subordinates from an User
-*OrgchartApi* | [**orgchartManagev1orgchart**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchart) | **GET** /manage/v1/orgchart | List of branches of given or root level
-*OrgchartApi* | [**orgchartManagev1orgchart_0**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchart_0) | **POST** /manage/v1/orgchart | Create a org chart node.
+*OrgchartApi* | [**orgchartManagev1orgchart**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchart) | **GET** /manage/v1/orgchart
+ | List of branches of given or root level
+*OrgchartApi* | [**orgchartManagev1orgchart_0**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchart_0) | **POST** /manage/v1/orgchart
+ | Create a org chart node.
 *OrgchartApi* | [**orgchartManagev1orgchartassignUsers**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartassignusers) | **POST** /manage/v1/orgchart/assign_users | Assigns a collection of user ids to the specified node.
 *OrgchartApi* | [**orgchartManagev1orgchartbranchId**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartbranchid) | **PUT** /manage/v1/orgchart/{branch_id} | Update selected branch.
-*OrgchartApi* | [**orgchartManagev1orgchartbranchId_0**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartbranchid_0) | **GET** /manage/v1/orgchart/{branch_id} | Get details of a selected branch.
+*OrgchartApi* | [**orgchartManagev1orgchartbranchId_0**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartbranchid_0) | **GET** /manage/v1/orgchart/{branch_id}
+ | Get details of a selected branch.
 *OrgchartApi* | [**orgchartManagev1orgchartbranchIdfieldVisibility**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartbranchidfieldvisibility) | **POST** /manage/v1/orgchart/{branch_id}/field_visibility | Assign user fields to branch/group
-*OrgchartApi* | [**orgchartManagev1orgchartbranchIdusers**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartbranchidusers) | **GET** /manage/v1/orgchart/{branch_id}/users | Retrieve information about a branch&#39;s users.
-*OrgchartApi* | [**orgchartManagev1orgchartid**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartid) | **DELETE** /manage/v1/orgchart/{id} | Deletes the branch.
-*OrgchartApi* | [**orgchartManagev1orgchartidmove**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartidmove) | **POST** /manage/v1/orgchart/{id}/move | Move and org chart under a new parent node.
+*OrgchartApi* | [**orgchartManagev1orgchartbranchIdusers**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartbranchidusers) | **GET** /manage/v1/orgchart/{branch_id}/users
+ | Retrieve information about a branch&#39;s users.
+*OrgchartApi* | [**orgchartManagev1orgchartid**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartid) | **DELETE** /manage/v1/orgchart/{id}
+ | Deletes the branch.
+*OrgchartApi* | [**orgchartManagev1orgchartidmove**](docs/Api/OrgchartApi.md#orgchartmanagev1orgchartidmove) | **POST** /manage/v1/orgchart/{id}/move
+ | Move and org chart under a new parent node.
 *PlanningApi* | [**planningSkillv1planning**](docs/Api/PlanningApi.md#planningskillv1planning) | **GET** /skill/v1/planning | Retrieves all planning periods, filtered on input parameters
 *PlanningApi* | [**planningSkillv1planning_0**](docs/Api/PlanningApi.md#planningskillv1planning_0) | **POST** /skill/v1/planning | Creates a new Planning Period
 *PlanningApi* | [**planningSkillv1planning_1**](docs/Api/PlanningApi.md#planningskillv1planning_1) | **DELETE** /skill/v1/planning | Deletes one or many Planning Periods
@@ -319,7 +329,8 @@ Class | Method | HTTP request | Description
 *PuApi* | [**puLearnv1puassignCategories**](docs/Api/PuApi.md#pulearnv1puassigncategories) | **POST** /learn/v1/pu/assign_categories | Assign course categories to power user
 *PuApi* | [**puLearnv1puassignCourses**](docs/Api/PuApi.md#pulearnv1puassigncourses) | **POST** /learn/v1/pu/assign_courses | Assign courses to power user
 *PuApi* | [**puLearnv1puassignLocations**](docs/Api/PuApi.md#pulearnv1puassignlocations) | **POST** /learn/v1/pu/assign_locations | Assign locations to power user
-*PuApi* | [**puLearnv1puassignOrgcharts**](docs/Api/PuApi.md#pulearnv1puassignorgcharts) | **POST** /learn/v1/pu/assign_orgcharts | Assign orgcharts to a Power User
+*PuApi* | [**puLearnv1puassignOrgcharts**](docs/Api/PuApi.md#pulearnv1puassignorgcharts) | **POST** /learn/v1/pu/assign_orgcharts
+ | Assign orgcharts to a Power User
 *PuApi* | [**puLearnv1puassignUsers**](docs/Api/PuApi.md#pulearnv1puassignusers) | **POST** /learn/v1/pu/assign_users | Assign users to power user
 *PuApi* | [**puLearnv1puid**](docs/Api/PuApi.md#pulearnv1puid) | **DELETE** /learn/v1/pu/{id} | Demoting a PU to user level
 *PublishApi* | [**publishSharev1publishidAsset**](docs/Api/PublishApi.md#publishsharev1publishidasset) | **GET** /share/v1/publish/{id_asset} | View asset or playlist publish status
@@ -393,7 +404,8 @@ Class | Method | HTTP request | Description
 *SimilarApi* | [**similarSharev1similarsidAsset**](docs/Api/SimilarApi.md#similarsharev1similarsidasset) | **GET** /share/v1/similars/{id_asset} | List Similar Assets
 *SiteApi* | [**siteManagev1sitebootstrap**](docs/Api/SiteApi.md#sitemanagev1sitebootstrap) | **GET** /manage/v1/site/bootstrap | Returns base information: default platform language, active languages, active plugins, color scheme and etc.
 *SiteApi* | [**siteManagev1sitehelpdesk**](docs/Api/SiteApi.md#sitemanagev1sitehelpdesk) | **POST** /manage/v1/site/helpdesk | Send Request to the sales or help team in the ERP
-*SiteApi* | [**siteManagev1sitethemethemeCode**](docs/Api/SiteApi.md#sitemanagev1sitethemethemecode) | **PUT** /manage/v1/site/theme/{theme_code} | Apply a theme by theme code
+*SiteApi* | [**siteManagev1sitethemethemeCode**](docs/Api/SiteApi.md#sitemanagev1sitethemethemecode) | **PUT** /manage/v1/site/theme/{theme_code}
+ | Apply a theme by theme code
 *SiteApi* | [**siteManagev1sitetranslate**](docs/Api/SiteApi.md#sitemanagev1sitetranslate) | **POST** /manage/v1/site/translate | Translates the passed array of phrases in all available languages
 *SiteApi* | [**siteManagev1sitetranslations**](docs/Api/SiteApi.md#sitemanagev1sitetranslations) | **GET** /manage/v1/site/translations | Get translation
 *SkillApi* | [**skillSkillv1skills**](docs/Api/SkillApi.md#skillskillv1skills) | **GET** /skill/v1/skills | Retrieves all Skills, filtered on input parameters
@@ -458,11 +470,16 @@ Class | Method | HTTP request | Description
 *TagsApi* | [**tagsManagev1tags**](docs/Api/TagsApi.md#tagsmanagev1tags) | **GET** /manage/v1/tags | View all tags
 *TagsApi* | [**tagsManagev1tags_0**](docs/Api/TagsApi.md#tagsmanagev1tags_0) | **POST** /manage/v1/tags | Creates a new tag
 *TagsApi* | [**tagsManagev1tagsidTag**](docs/Api/TagsApi.md#tagsmanagev1tagsidtag) | **GET** /manage/v1/tags/{id_tag} | View tag
-*ThemeApi* | [**themeManagev1theme**](docs/Api/ThemeApi.md#thememanagev1theme) | **GET** /manage/v1/theme | View all themes
-*ThemeApi* | [**themeManagev1themethemeCode**](docs/Api/ThemeApi.md#thememanagev1themethemecode) | **GET** /manage/v1/theme/{theme_code} | View a theme by theme code
-*ThemeApi* | [**themeManagev1themethemeCode_0**](docs/Api/ThemeApi.md#thememanagev1themethemecode_0) | **PUT** /manage/v1/theme/{theme_code} | Update a theme by theme code
-*ThemeApi* | [**themeManagev1themethemeCode_1**](docs/Api/ThemeApi.md#thememanagev1themethemecode_1) | **DELETE** /manage/v1/theme/{theme_code} | Delete a theme
-*ThemeApi* | [**themeManagev1themethemeCodevariantidMultidomain**](docs/Api/ThemeApi.md#thememanagev1themethemecodevariantidmultidomain) | **PUT** /manage/v1/theme/{theme_code}/variant/{id_multidomain} | Update or create a theme variant by theme code and multidomain id
+*ThemeApi* | [**themeManagev1theme**](docs/Api/ThemeApi.md#thememanagev1theme) | **GET** /manage/v1/theme
+ | View all themes
+*ThemeApi* | [**themeManagev1themethemeCode**](docs/Api/ThemeApi.md#thememanagev1themethemecode) | **GET** /manage/v1/theme/{theme_code}
+ | View a theme by theme code
+*ThemeApi* | [**themeManagev1themethemeCode_0**](docs/Api/ThemeApi.md#thememanagev1themethemecode_0) | **PUT** /manage/v1/theme/{theme_code}
+ | Update a theme by theme code
+*ThemeApi* | [**themeManagev1themethemeCode_1**](docs/Api/ThemeApi.md#thememanagev1themethemecode_1) | **DELETE** /manage/v1/theme/{theme_code}
+ | Delete a theme
+*ThemeApi* | [**themeManagev1themethemeCodevariantidMultidomain**](docs/Api/ThemeApi.md#thememanagev1themethemecodevariantidmultidomain) | **PUT** /manage/v1/theme/{theme_code}/variant/{id_multidomain}
+ | Update or create a theme variant by theme code and multidomain id
 *TooltipsApi* | [**tooltipsSharev1assetidAssettooltips**](docs/Api/TooltipsApi.md#tooltipssharev1assetidassettooltips) | **GET** /share/v1/asset/{id_asset}/tooltips | View Asset assigned tags
 *TrainingrequestsApi* | [**trainingrequestsSkillv1requests**](docs/Api/TrainingrequestsApi.md#trainingrequestsskillv1requests) | **GET** /skill/v1/requests | Returns a summary List the Training Requests filtered by input parameters
 *TrainingrequestsApi* | [**trainingrequestsSkillv1requests_0**](docs/Api/TrainingrequestsApi.md#trainingrequestsskillv1requests_0) | **POST** /skill/v1/requests | Creates a new Training Request for an User
@@ -510,9 +527,12 @@ Class | Method | HTTP request | Description
 *UserfieldApi* | [**userfieldManagev1userFieldsfieldId**](docs/Api/UserfieldApi.md#userfieldmanagev1userfieldsfieldid) | **GET** /manage/v1/user_fields/{field_id} | Get User addtional filds info
 *UserfieldApi* | [**userfieldManagev1userFieldsfieldId_0**](docs/Api/UserfieldApi.md#userfieldmanagev1userfieldsfieldid_0) | **PUT** /manage/v1/user_fields/{field_id} | Update user fields
 *UserfieldApi* | [**userfieldManagev1userFieldsfieldId_1**](docs/Api/UserfieldApi.md#userfieldmanagev1userfieldsfieldid_1) | **DELETE** /manage/v1/user_fields/{field_id} | Deletes one user field
-*WebinarApi* | [**webinarLearnv1webinaridSessiondateDayrecording**](docs/Api/WebinarApi.md#webinarlearnv1webinaridsessiondatedayrecording) | **POST** /learn/v1/webinar/{id_session}/{date_day}/recording | Submit a webinar recording for a session date
-*WebinarApi* | [**webinarLearnv1webinaridSessiondateDayrecordingStatus**](docs/Api/WebinarApi.md#webinarlearnv1webinaridsessiondatedayrecordingstatus) | **GET** /learn/v1/webinar/{id_session}/{date_day}/recording_status | Check the status of a webinar recording for a session date
-*WebinarApi* | [**webinarLearnv1webinaridSessiondateDayrecording_0**](docs/Api/WebinarApi.md#webinarlearnv1webinaridsessiondatedayrecording_0) | **DELETE** /learn/v1/webinar/{id_session}/{date_day}/recording | Submit a webinar recording for a session date
+*WebinarApi* | [**webinarLearnv1webinaridSessiondateDayrecording**](docs/Api/WebinarApi.md#webinarlearnv1webinaridsessiondatedayrecording) | **POST** /learn/v1/webinar/{id_session}/{date_day}/recording
+ | Submit a webinar recording for a session date
+*WebinarApi* | [**webinarLearnv1webinaridSessiondateDayrecordingStatus**](docs/Api/WebinarApi.md#webinarlearnv1webinaridsessiondatedayrecordingstatus) | **GET** /learn/v1/webinar/{id_session}/{date_day}/recording_status
+ | Check the status of a webinar recording for a session date
+*WebinarApi* | [**webinarLearnv1webinaridSessiondateDayrecording_0**](docs/Api/WebinarApi.md#webinarlearnv1webinaridsessiondatedayrecording_0) | **DELETE** /learn/v1/webinar/{id_session}/{date_day}/recording
+ | Submit a webinar recording for a session date
 
 
 ## Documentation For Models
